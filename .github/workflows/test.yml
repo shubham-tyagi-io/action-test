@@ -14,7 +14,7 @@ jobs:
       - name: Setup Maven Action
         uses: shubham-tyagi-io/poc/setup-maven@main
         with:
-          java-version: '9'
+          java-version: '11'
           maven-version: '3.9.2'
     
       - name: Build with Maven
