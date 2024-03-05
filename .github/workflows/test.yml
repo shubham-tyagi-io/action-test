@@ -1,15 +1,20 @@
 - name: test composite 
-  on:
-    push
+on:
+  push
 
-  jobs:
-
+jobs:
+  composite:
+  runs-on: ubuntu-latest
+ 
     steps:
-    - name: Setup Maven Action
-      uses: poc/setup-maven-action@v1
-      with:
-        java-version: 9
-        maven-version: 3.8.4
-  
-    - name: Build with Maven
-      run: mvn verify
+      - name: Check out repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Maven Action
+        uses: poc/setup-maven-action@v1
+        with:
+          java-version: 9
+          maven-version: 3.8.4
+    
+      - name: Build with Maven
+        run: mvn verify
