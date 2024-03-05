@@ -1,4 +1,5 @@
-- name: test composite 
+---
+name: test composite 
 on:
   push
 
