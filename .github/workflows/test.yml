@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Setup Maven Action
-        uses: poc/setup-maven-action@v1
+        uses: poc/setup-maven@v1
         with:
           java-version: 9
           maven-version: 3.8.4
